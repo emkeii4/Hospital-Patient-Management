@@ -70,7 +70,6 @@ def doctors_by_speciality(doctors_staff: DoctorsList, speciality: str) -> Option
         doctors_name, doctors_speciality = doctor
         if doctors_speciality == speciality:
             return doctors_name
-    return None
 
 
 # Main function
@@ -86,19 +85,8 @@ def main_function(registration_of_patients: PatientsList, doctors_staff: Doctors
         symptom = symptoms[0]
         needed_speciality_from_map, priority = symptom_speciality[symptom]
         needed_speciality = speciality_by_symptoms(patient)
-        # needed_speciality is None if it is not found
-        if needed_speciality is None:
-            message = f"Patient's name: {name}, ERROR: No speciality found for {symptom}"
-            result.append(message)
-            continue  # Pass to next patient
-
         chosen_doctor = doctors_by_speciality(doctors_staff, needed_speciality)
-        # chosen_doctor could also be None
-        if chosen_doctor is None:
-            message = f"Patient's name: {name}, ERROR: No doctor found for {needed_speciality}"
-            result.append(message)
-            continue  # Pass to next patient
-
+      
         message = f"Patient's name: {name}, Assigned doctor: {chosen_doctor}, Medical area: {needed_speciality}, Urgency: {priority}"
         result.append(message)
     return result
