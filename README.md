@@ -2,7 +2,7 @@
 
 ## What does this program do?
 This program manages the assignment of patients to doctors in a hospital.
-- Record patient data.
+- Records patient data.
 - Maintains a list of doctors by medical area.
 - Contains a dictionary with diseases, the corresponding area and the level of urgency.
 - Returns a report with:
