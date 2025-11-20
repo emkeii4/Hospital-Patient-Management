@@ -11,12 +11,3 @@ This program manages the assignment of patients to doctors in a hospital.
     - Medical area.
     - Number on the urgency scale.
 Its objective is to facilitate the organisation and prioritization of hospital care.
-
----
-
-## How to install and execute it
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/emkeii4/Hospital-Patient-Management.git
-   cd Hospital-Patient-Management
-   
