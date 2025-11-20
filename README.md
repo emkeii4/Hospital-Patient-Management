@@ -11,3 +11,10 @@ This program manages the assignment of patients to doctors in a hospital.
     - Medical area.
     - Number on the urgency scale.
 Its objective is to facilitate the organisation and prioritization of hospital care.
+
+---
+
+## How to install and execute it
+1. Unzip and save the folder.
+2. Open the Hospital-Patient-Management.py with a program that runs Python files.
+3. Execute it.
