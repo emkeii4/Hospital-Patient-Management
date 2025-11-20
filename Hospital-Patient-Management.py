@@ -35,8 +35,7 @@ doctors_staff: DoctorsList = [
 symptom_speciality: SymptomMap = {
     # A dictionary with keys (illnesses) and values (a tuple with a speciality
     # and an urgency value)
-    # The Urgency scale goes from 2, which is the lowest value, to 5 (highest value)
-    # Urgency scale -> (Highest = 5, Lowest = 2)
+    # Urgency scale -> (Highest = 5, Lowest = 1)
     "fever": ("General practice", 2),
     "fracture": ("Traumatology", 4),
     "diabetes": ("Endocrinology", 3),
@@ -45,7 +44,6 @@ symptom_speciality: SymptomMap = {
 }
 
 
-# Secondary functions' definition
 # --- Definition of auxiliary functions ---
 def speciality_by_symptoms(patient: PatientRecord) -> Optional[str]:
     """
@@ -72,10 +70,9 @@ def doctors_by_speciality(doctors_staff: DoctorsList, speciality: str) -> Option
             return doctors_name
 
 
-# Main function
+# --- Main function ---
 def main_function(registration_of_patients: PatientsList, doctors_staff: DoctorsList) -> List[str]:
     """
-    Main function
     3. Iterates through each patient, determines the required speciality, finds a suitable doctor, and indicates the urgency.
     Returns the assignment for each patient, which is a list of strings.
     """
