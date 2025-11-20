@@ -42,8 +42,6 @@ symptom_speciality: SymptomMap = {
     "diabetes": ("Endocrinology", 3),
     "depression": ("Psychology", 3),
     "chest pain": ("Cardiology", 5),
-    "rash": ("Dermatology", 2),
-    "headache": ("Neurology", 2)
 }
 
 
