@@ -80,8 +80,7 @@ def main_function(registration_of_patients: PatientsList, doctors_staff: Doctors
     for patient in registration_of_patients:
         name, age, gender, symptoms = patient
         symptom = symptoms[0]
-        needed_speciality_from_map, priority = symptom_speciality[symptom]
-        needed_speciality = speciality_by_symptoms(patient)
+        needed_speciality, priority = speciality_by_symptoms(patient)
         chosen_doctor = doctors_by_speciality(doctors_staff, needed_speciality)
       
         message = f"Patient's name: {name}, Assigned doctor: {chosen_doctor}, Medical area: {needed_speciality}, Urgency: {priority}"
