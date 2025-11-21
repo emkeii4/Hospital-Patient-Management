@@ -51,11 +51,11 @@ def speciality_by_symptoms(patient: PatientRecord) -> Optional[str]:
     1. Finds the needed speciality to treat a certain symptom.
     Returns the appropriate value to its key.
     """
-    name, age, gender, symptoms = patient
+    _, _, _, symptoms = patient
     for symptom in symptoms:
         if symptom in symptom_speciality:
-            return symptom_speciality[symptom][0]
-    return None
+            speciality, priority = symptom_speciality[symptom]
+            return speciality, priority
 
 
 def doctors_by_speciality(doctors_staff: DoctorsList, speciality: str) -> Optional[str]:
